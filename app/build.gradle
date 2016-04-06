@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.aiba.haimaelc"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            //是否进行混淆
+            minifyEnabled true
+            shrinkResources true /*删除无效的Resoure*/
+            //混淆文件的位置
+            proguardFiles 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources true /*删除无效的Resoure*/
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.aliyun.dpa:oss-android-sdk:2.1.0'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+}

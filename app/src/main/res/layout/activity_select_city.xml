@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_gray"
+        android:paddingBottom="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp">
+
+        <EditText
+            android:id="@+id/city_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_map_destination"
+            android:drawableLeft="@mipmap/map_search"
+            android:drawablePadding="10dp"
+            android:hint="输入城市名或首字母查询"
+            android:imeOptions="actionSearch"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/text_gray_dark"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <ImageView
+            android:id="@+id/city_search_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@mipmap/map_search_delete" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.aiba.haimaelc.widget.PinnedHeaderListView
+            android:id="@+id/city_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.aiba.haimaelc.widget.MySideBar
+            android:id="@+id/sidebar"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_no_data"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:drawablePadding="10dp"
+    android:drawableTop="@mipmap/no_data_box"
+    android:gravity="center_horizontal"
+    android:text="啊哦！暂时还没有相关数据哦~"
+    android:textColor="@color/text_gray"
+    android:textSize="@dimen/text_size_small"
+    android:visibility="gone" />

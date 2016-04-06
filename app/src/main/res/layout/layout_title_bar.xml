@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/green_dark"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_title_bar_back"
+        android:layout_width="@dimen/title_bar_height"
+        android:layout_height="@dimen/title_bar_height"
+        android:scaleType="centerInside"
+        android:src="@mipmap/bar_back"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_big"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <AutoCompleteTextView
+                android:id="@+id/destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_map_destination"
+                android:drawableLeft="@mipmap/map_search"
+                android:drawablePadding="5dp"
+                android:hint="输入省市、充电点"
+                android:imeOptions="actionSearch"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/text_gray_dark"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/text_size_small" />
+
+            <ImageView
+                android:id="@+id/title_bar_search_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@mipmap/map_search_delete"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/title_bar_height"
+        android:layout_height="@dimen/title_bar_height">
+
+        <ImageView
+            android:id="@+id/iv_title_bar_right"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:scaleType="centerInside"
+            android:src="@mipmap/bar_list"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title_bar_right"
+            android:layout_width="@dimen/title_bar_height"
+            android:layout_height="@dimen/title_bar_height"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

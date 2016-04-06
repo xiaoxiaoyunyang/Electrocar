@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/week_average_cost_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_statustics_item_padding"
+    android:paddingTop="@dimen/activity_statustics_item_padding"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/main_txt_black"
+        android:textSize="@dimen/text_size_normal"
+        android:text="日期"
+        android:paddingLeft="18dp"/>
+
+    <TextView
+        android:id="@+id/travll_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/main_txt_black"
+        android:textSize="@dimen/text_size_normal"
+        android:text="行驶里程"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/elc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/main_txt_black"
+        android:textSize="@dimen/text_size_normal"
+        android:text="耗电"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/main_txt_black"
+        android:textSize="@dimen/text_size_normal"
+        android:text="费用"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rescue_charge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:text="充电详情"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/tv_charge_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:text="充电开始时间："
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/tv_charge_finish_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/tv_charge_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/tv_charge_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray" />
+</LinearLayout>

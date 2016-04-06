@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_drawable</item>
+        <item name="android:minHeight">12dp</item>
+        <item name="android:maxHeight">12dp</item>
+    </style>
+
+    <style name="MyBigRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_big_drawable</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxHeight">30dp</item>
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="ChoiceDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/bg_choice_dialog</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ChoiceDialogAnimation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/choice_dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/choice_dialog_exit</item>
+    </style>
+
+    <style name="activity_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/activity_animation</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <!--<item name="colorPrimary">#1DA141</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <style name="activity_animation" parent="@android:style/Animation.Translucent">
+        <item name="android:activityOpenEnterAnimation">@anim/push_right_in
+        </item><!-- 第一个表示新的activity创建进入效果-->
+        <item name="android:activityOpenExitAnimation">@anim/push_left_in
+        </item><!-- activity还没有finish()下退出效果-->
+        <item name="android:activityCloseEnterAnimation">@anim/push_left_out
+        </item><!-- 上一个activity返回进入效果-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/retain</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/retain</item>&ndash;&gt;-->
+        <item name="android:activityCloseExitAnimation">@anim/push_right_out
+        </item><!-- activity finish()之后退出效果-->
+    </style>
+
+    <style name="DistanceSelectSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/seek_bar_progress_horizontal</item>
+        <item name="android:minHeight">8dp</item>
+        <item name="android:thumb">@mipmap/seek_bar_thumb</item>
+        <item name="android:thumbOffset">20dp</item>
+    </style>
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:onClick="showLeftMenu"
+            android:padding="15dp"
+            android:src="@mipmap/home_personal_center"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="海马新能源"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_big"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:padding="15dp"
+                android:src="@mipmap/home_message"/>
+
+            <ImageView
+                android:id="@+id/new_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:contentDescription="@null"
+                android:src="@mipmap/home_message_red_point"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/home_remind_bar"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/car_status_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/car_status_selector"/>
+
+                <TextView
+                    android:id="@+id/car_status_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="轮胎气压低"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_small"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/experience"/>
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/ponit_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ponit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:src="@drawable/viewpage_point_selector"/>
+
+        <ImageView
+            android:id="@+id/ponit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:paddingLeft="5dp"
+            android:src="@drawable/viewpage_point_selector"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/home_refresh"
+            android:drawablePadding="5dp"
+            android:text="2016/03/18 PM1:31"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_smallest"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp">
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/left"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/right"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/car_lock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:drawableTop="@mipmap/lock_switch"
+                android:gravity="center"
+                android:text="中控制开关"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_smaller"/>
+
+            <TextView
+                android:id="@+id/car_serch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:drawableTop="@mipmap/find_car"
+                android:gravity="center"
+                android:text="车库寻车"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_smaller"/>
+
+            <TextView
+                android:id="@+id/car_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:drawableTop="@mipmap/open_trunk"
+                android:gravity="center"
+                android:text="开启尾箱"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_smaller"/>
+
+            <TextView
+                android:id="@+id/car_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:drawableTop="@mipmap/turn_on_light"
+                android:gravity="center"
+                android:text="关闭车灯"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_smaller"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

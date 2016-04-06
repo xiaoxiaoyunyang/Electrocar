@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/top_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:gravity="right"
+            android:text="1.2 bar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/top_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:gravity="center"
+            android:text="2.5 bar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/car_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@null"
+            android:src="@mipmap/car"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/car_tire_horizontal_margin"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/top_left_tire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.5"
+                android:contentDescription="@null"
+                android:paddingLeft="@dimen/car_tire_vertical_margin"
+                android:src="@drawable/car_tire_selector" />
+
+            <ImageView
+                android:id="@+id/top_right_tire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:contentDescription="@null"
+                android:src="@drawable/car_tire_selector" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.7"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/car_tire_horizontal_margin"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bottom_left_tire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.5"
+                android:contentDescription="@null"
+                android:paddingLeft="@dimen/car_tire_vertical_margin"
+                android:src="@drawable/car_tire_selector" />
+
+            <ImageView
+                android:id="@+id/bottom_right_tire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:contentDescription="@null"
+                android:src="@drawable/car_tire_selector" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.7"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/car_view"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bottom_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:gravity="right"
+            android:text="2.5 bar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/bottm_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:gravity="center"
+            android:text="2.5 bar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/pile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/menu_horizontal_margin"
+        android:text="1号桩"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="30dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/menu_horizontal_margin"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快充360V"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/pile_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_order_pile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/bt_selector_pile_order" />
+</LinearLayout>

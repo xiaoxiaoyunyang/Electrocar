@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/child_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawablePadding="5dp"
+        android:paddingBottom="@dimen/menu_vertical_margin"
+        android:paddingLeft="@dimen/menu_horizontal_margin"
+        android:paddingRight="@dimen/menu_horizontal_margin"
+        android:paddingTop="@dimen/menu_vertical_margin"
+        android:text="上海市"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        android:id="@+id/city_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/line_gray" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.aiba.haimaelc.widget.RefreshLayout
+        android:id="@+id/rl_service_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/refresh_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray"
+            android:divider="@color/line_gray"
+            android:dividerHeight="0.5dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </com.aiba.haimaelc.widget.RefreshLayout>
+
+    <include layout="@layout/layout_no_data" />
+</RelativeLayout>
+
+

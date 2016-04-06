@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HaimaElc</string>
+    <string name="order_hint">温馨提示：\n1.超过预计到达时间，系统将自动取消充电桩的充电服务，请按时抵达充电桩。\n2.本次消费金额仅为占有充电资源服务费，且不可退款</string>
+
+    <string name="preference_default_tts_role">xiaoyan</string>
+    <string name="preference_key_tts_speed">tts_speed</string>
+    <string name="preference_title_tts_speed">语速</string>
+    <string name="preference_default_tts_speed">50</string>
+    <string name="preference_dialog_title_tts_speed">选择语速</string>
+    <string name="preference_key_tts_volume">tts_volume</string>
+    <string name="preference_title_tts_volume">音量</string>
+    <string name="preference_default_tts_volume">50</string>
+    <string name="preference_dialog_title_tts_volume">选择音量</string>
+    <string name="preference_key_tts_pitch">tts_pitch</string>
+    <string name="preference_title_tts_pitch">语调</string>
+    <string name="preference_default_tts_pitch">50</string>
+    <string name="intell_bd_title">智能播报</string>
+
+    <string name="location_city">定</string>
+    <string name="hot_city">热</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_bar_height">50dp</dimen>
+    <dimen name="pagerSlidingTabStrip_height">45dp</dimen>
+
+    <dimen name="text_size_bigger">18sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_small">11sp</dimen>
+    <dimen name="text_size_smaller">10sp</dimen>
+    <dimen name="text_size_smallest">9sp</dimen>
+
+    <dimen name="text_main_order_time">22sp</dimen>
+    <dimen name="text_main_dump_energy">50sp</dimen>
+    <dimen name="text_main_endurance">25sp</dimen>
+    <dimen name="text_charging_remaining">45sp</dimen>
+
+    <dimen name="text_rescue_number">22sp</dimen>
+
+    <dimen name="menu_vertical_margin">14dp</dimen>
+    <dimen name="menu_horizontal_margin">16dp</dimen>
+    <dimen name="half_horizontal_margin">8dp</dimen>
+
+    <dimen name="car_tire_horizontal_margin">10dp</dimen>
+    <dimen name="car_tire_vertical_margin">20dp</dimen>
+    <dimen name="car_exam_progress_width">55dp</dimen>
+    <dimen name="car_exam_image_width">40dp</dimen>
+
+    <dimen name="activity_main_dump_progress_width">130dp</dimen>
+    <dimen name="activity_main_progress_strokeWidth">8dp</dimen>
+
+    <dimen name="battery_progress_height">11dp</dimen>
+    <dimen name="battery_progress_margin_left">9dp</dimen>
+    <dimen name="battery_progress_margin_right">12dp</dimen>
+
+    <dimen name="battery_txt_margin_right">8dp</dimen>
+    <dimen name="battery_txt_margin_top">9dp</dimen>
+
+    <dimen name="go_charge_margin_top">13dp</dimen>
+    <dimen name="customLine_stroke">4px</dimen>
+    <dimen name="dot_radius">8px</dimen>
+    <dimen name="activity_main_vertical_margin">14dp</dimen>
+
+    <dimen name="activity_statustics_item_padding">13dp</dimen>
+    <dimen name="point_tip_offset_x">21dp</dimen>
+    <dimen name="point_tip_offset_y">7dp</dimen>
+</resources>

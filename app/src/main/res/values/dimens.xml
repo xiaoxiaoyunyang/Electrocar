@@ -1,0 +1,40 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_size_bigger">16sp</dimen>
+    <dimen name="text_size_big">14sp</dimen>
+    <dimen name="text_size_normal">11sp</dimen>
+    <dimen name="text_size_small">9sp</dimen>
+    <dimen name="text_size_smaller">8sp</dimen>
+    <dimen name="text_size_smallest">8sp</dimen>
+
+    <dimen name="text_main_order_time">20sp</dimen>
+    <dimen name="text_main_dump_energy">45sp</dimen>
+    <dimen name="text_main_endurance">20sp</dimen>
+    <dimen name="text_charging_remaining">40sp</dimen>
+
+    <dimen name="text_rescue_number">20sp</dimen>
+
+
+    <dimen name="menu_vertical_margin">11dp</dimen>
+    <dimen name="menu_horizontal_margin">14dp</dimen>
+    <dimen name="half_horizontal_margin">7dp</dimen>
+
+    <dimen name="car_tire_horizontal_margin">8dp</dimen>
+    <dimen name="car_tire_vertical_margin">20dp</dimen>
+
+    <dimen name="activity_main_dump_progress_width">100dp</dimen>
+    <dimen name="activity_main_progress_strokeWidth">7dp</dimen>
+
+    <dimen name="battery_progress_height">8dp</dimen>
+    <dimen name="battery_progress_margin_left">8dp</dimen>
+    <dimen name="battery_progress_margin_right">10dp</dimen>
+
+    <dimen name="battery_txt_margin_right">7dp</dimen>
+    <dimen name="battery_txt_margin_top">5dp</dimen>
+
+    <dimen name="go_charge_margin_top">6dp</dimen>
+
+</resources>

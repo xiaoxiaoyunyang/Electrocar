@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sjy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/activity_maint_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- 油量 续航里程-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.aiba.haimaelc.widget.CircleGradientProgressView
+                    android:id="@+id/dump_progress"
+                    android:layout_width="@dimen/activity_main_dump_progress_width"
+                    android:layout_height="@dimen/activity_main_dump_progress_width"
+                    android:layout_gravity="center"
+                    sjy:baseStrokeWidth="2dp"
+                    sjy:bgColor="#DEDEDE"
+                    sjy:endColor="@color/normal_elc_end"
+                    sjy:lowEndColor="@color/low_elc_end"
+                    sjy:lowStartColor="@color/low_elc_start"
+                    sjy:percent="90"
+                    sjy:startAngle="270"
+                    sjy:startColor="@color/normal_elc_start"
+                    sjy:strokeWidth="@dimen/activity_main_progress_strokeWidth"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dump_energy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="75"
+                            android:textColor="@color/main_txt_green"
+                            android:textSize="@dimen/text_main_dump_energy"/>
+
+                        <TextView
+                            android:id="@+id/dump_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="%"
+                            android:textColor="@color/main_txt_green"
+                            android:textSize="@dimen/text_size_normal"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="剩余电量"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_normal"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/elc_status_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/elc_status_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="续航里程"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <!--续航里程 -->
+                    <TextView
+                        android:id="@+id/endurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="90km"
+                        android:textColor="@color/main_txt_green"
+                        android:textSize="@dimen/text_main_endurance"/>
+
+                    <TextView
+                        android:id="@+id/battery_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/battery_progress_margin_right"
+                        android:layout_marginTop="@dimen/battery_txt_margin_top"
+                        android:text="75%"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_smaller"/>
+
+                    <LinearLayout
+                        android:id="@+id/battery_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/battery_red_green_bg_selector"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/battery_progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/battery_progress_height"
+                            android:layout_marginLeft="@dimen/battery_progress_margin_left"
+                            android:layout_marginRight="@dimen/battery_progress_margin_right"
+                            android:max="100"
+                            android:progress="80"
+                            android:progressDrawable="@drawable/elc_progressbar_green_bg"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/go_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/go_charge_margin_top"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/go_red_green_bg_selector"
+                        android:onClick="doChargeClick"
+                        android:text="前去充电"
+                        android:textColor="@color/main_txt_green"
+                        android:textSize="@dimen/text_size_normal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 地图-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/home_map">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/home_map_location"
+                android:drawablePadding="5dp"
+                android:maxLength="23"
+                android:text="上海市杨浦区国定东路创新工厂200号3号......."
+                android:textColor="@color/main_txt_green"
+                android:textSize="@dimen/text_size_small"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/address"
+                android:src="@mipmap/home_map_extend"/>
+
+        </RelativeLayout>
+        <!-- 车辆状态 体检-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_main_vertical_margin">
+
+                <TextView
+                    android:id="@+id/car_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="车辆状态"
+                    android:textColor="@color/main_txt_black"
+                    android:textSize="@dimen/text_size_big"/>
+
+                <TextView
+                    android:id="@+id/start_exam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_green_bg"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="开始体检"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_small"/>
+
+            </LinearLayout>
+
+            <!--<GridView-->
+            <!--android:id="@+id/examination"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:numColumns="4"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_main_vertical_margin"
+                android:paddingTop="@dimen/activity_main_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:background="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.aiba.haimaelc.widget.HoloCircleRoundProgressView
+                            android:id="@+id/elc_progress"
+                            android:layout_width="@dimen/car_exam_progress_width"
+                            android:layout_height="@dimen/car_exam_progress_width"
+                            android:layout_gravity="center"
+                            sjy:holoEndColor="@color/normal_elc_end"
+                            sjy:holoLowEndColor="@color/low_elc_end"
+                            sjy:holoLowStartColor="@color/low_elc_start"
+                            sjy:holoPercent="100"
+                            sjy:holoStartAngle="90"
+                            sjy:holoStartColor="@color/normal_elc_start"
+                            sjy:holoStrokeWidth="2dp"
+                            android:padding="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/elc_image"
+                            android:layout_width="@dimen/car_exam_image_width"
+                            android:layout_height="@dimen/car_exam_image_width"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/electric_system"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/elc_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:text="电力系统"
+                        android:textColor="@color/main_txt_black"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <TextView
+                        android:id="@+id/elc_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_smaller"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.aiba.haimaelc.widget.HoloCircleRoundProgressView
+                            android:id="@+id/power_progress"
+                            android:layout_width="@dimen/car_exam_progress_width"
+                            android:layout_height="@dimen/car_exam_progress_width"
+                            android:layout_gravity="center"
+                            sjy:holoEndColor="@color/normal_elc_end"
+                            sjy:holoLowEndColor="@color/low_elc_end"
+                            sjy:holoLowStartColor="@color/low_elc_start"
+                            sjy:holoPercent="100"
+                            sjy:holoStartAngle="90"
+                            sjy:holoStartColor="@color/normal_elc_start"
+                            sjy:holoStrokeWidth="2dp"
+                            android:padding="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/power_image"
+                            android:layout_width="@dimen/car_exam_image_width"
+                            android:layout_height="@dimen/car_exam_image_width"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/power_system"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/power_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:text="动力系统"
+                        android:textColor="@color/main_txt_black"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <TextView
+                        android:id="@+id/power_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_smaller"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.aiba.haimaelc.widget.HoloCircleRoundProgressView
+                            android:id="@+id/stable_progress"
+                            android:layout_width="@dimen/car_exam_progress_width"
+                            android:layout_height="@dimen/car_exam_progress_width"
+                            android:layout_gravity="center"
+                            sjy:holoEndColor="@color/normal_elc_end"
+                            sjy:holoLowEndColor="@color/low_elc_end"
+                            sjy:holoLowStartColor="@color/low_elc_start"
+                            sjy:holoPercent="100"
+                            sjy:holoStartAngle="90"
+                            sjy:holoStartColor="@color/normal_elc_start"
+                            sjy:holoStrokeWidth="2dp"
+                            android:padding="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/stable_image"
+                            android:layout_width="@dimen/car_exam_image_width"
+                            android:layout_height="@dimen/car_exam_image_width"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/stable_system"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/stable_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:text="稳定系统"
+                        android:textColor="@color/main_txt_black"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <TextView
+                        android:id="@+id/stable_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_smaller"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.aiba.haimaelc.widget.HoloCircleRoundProgressView
+                            android:id="@+id/brake_progress"
+                            android:layout_width="@dimen/car_exam_progress_width"
+                            android:layout_height="@dimen/car_exam_progress_width"
+                            android:layout_gravity="center"
+                            sjy:holoEndColor="@color/normal_elc_end"
+                            sjy:holoLowEndColor="@color/low_elc_end"
+                            sjy:holoLowStartColor="@color/low_elc_start"
+                            sjy:holoPercent="100"
+                            sjy:holoStartAngle="90"
+                            sjy:holoStartColor="@color/normal_elc_start"
+                            sjy:holoStrokeWidth="2dp"
+                            android:padding="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/brake_image"
+                            android:layout_width="@dimen/car_exam_image_width"
+                            android:layout_height="@dimen/car_exam_image_width"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/brake_system"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/brake_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:text="刹车系统"
+                        android:textColor="@color/main_txt_black"
+                        android:textSize="@dimen/text_size_normal"/>
+
+                    <TextView
+                        android:id="@+id/brake_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="@dimen/text_size_smaller"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/activity_main_vertical_margin"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="功耗清单"
+                        android:textColor="@color/main_txt_black"
+                        android:textSize="@dimen/text_size_big"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平均"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="342wh/km"
+                        android:textColor="@color/main_txt_gray"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="wh/km"
+                    android:textColor="@color/main_txt_gray"
+                    android:textSize="14sp"/>
+
+                <com.aiba.haimaelc.widget.LinearGradientAreaLineChart
+                    android:id="@+id/power_dissipation"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/point_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/home_show_box"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="功耗"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_smallest"/>
+
+                <TextView
+                    android:id="@+id/power_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_smallest"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日统计"
+                android:textColor="@color/main_txt_black"
+                android:textSize="@dimen/text_size_big"
+                android:drawableLeft="@mipmap/statistical_icon"
+                android:drawablePadding="4dp"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/activity_main_vertical_margin"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开车78km 耗电6.8度"
+                android:textColor="@color/main_txt_gray"
+                android:textSize="@dimen/text_size_normal"
+                android:drawableRight="@mipmap/arrow"
+                android:drawablePadding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="@dimen/activity_main_vertical_margin"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
